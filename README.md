@@ -1,6 +1,48 @@
-# Website
+# Enterprise App Architecture Blueprint System
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+An interactive visualization and documentation system for enterprise application architecture using C4-style diagrams.
+
+## Overview
+
+This system provides a maintainable, interactive enterprise architecture documentation and visualization platform for mobile applications. It features:
+
+- C4-style architecture diagrams showing capabilities, relationships, and hierarchy
+- Clear visualization of metadata (status, criticality, domain, owner)
+- Visually distinct relationship lines between components
+- Organized, scalable layout for clarity and future collaboration
+- MDX-based documentation with frontmatter metadata
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Extract blueprint data
+npm run extract-blueprint
+
+# Start the development server
+npm start
+```
+
+## Adding New Capabilities
+
+1. Create a new MDX file in the appropriate directory:
+   - Pillar capabilities: `docs/capabilities/`
+   - Sub-capabilities: `docs/capabilities/[parent-pillar]/sub-capabilities/`
+
+2. Include the proper frontmatter metadata with relationships
+
+3. Run the extraction script to update the visualization data:
+   ```bash
+   npm run extract-blueprint
+   ```
+
+## Built With
+
+- [Docusaurus 2](https://docusaurus.io/) - The documentation framework
+- [React Flow](https://reactflow.dev/) - For interactive diagrams
+- [MDX](https://mdxjs.com/) - For enhanced markdown with React components
 
 ### Installation
 
