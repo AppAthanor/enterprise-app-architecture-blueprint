@@ -199,7 +199,7 @@ const BlueprintVisualization: React.FC = () => {
       try {
         // Load the actual blueprint data from the JSON file
         // Use a path that works with the baseUrl
-        const response = await fetch('/blueprint_documentation/blueprint-data.json');
+        const response = await fetch('/enterprise-app-architecture-blueprint/blueprint-data.json');
         if (!response.ok) {
           throw new Error(`Failed to fetch blueprint data: ${response.status}`);
         }
