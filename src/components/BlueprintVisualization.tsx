@@ -218,7 +218,7 @@ const BlueprintVisualization: React.FC = () => {
         }));
 
         // Create edges with different styles based on type - C4-style relationships
-        const flowEdges = blueprintData.relationships.map((rel: any) => {
+        let flowEdges = blueprintData.relationships.map((rel: any) => {
           // Define colors and styles for different relationship types in C4 style
           const relationshipStyles: Record<string, any> = {
             'parent-pillar': {
@@ -300,6 +300,46 @@ const BlueprintVisualization: React.FC = () => {
           };
         });
 
+        // Add parent-child connections between functionalities and their parent pillars
+        const parentChildEdges = [];
+        
+        // Loop through all capabilities to find functionalities
+        for (const capability of blueprintData.capabilities) {
+          if (capability.type === 'functionality' && capability.dependencies) {
+            // Find parent pillar relationship
+            const parentPillarRel = capability.dependencies.find(dep => dep.type === 'parent-pillar');
+            if (parentPillarRel) {
+              // Create a connection line from functionality to parent pillar
+              parentChildEdges.push({
+                id: `${capability.id}-to-${parentPillarRel.id}`,
+                source: capability.id,
+                target: parentPillarRel.id,
+                type: 'smoothstep',
+                animated: false,
+                style: { 
+                  stroke: '#08427b',  // Dark blue for containment
+                  strokeWidth: 2,
+                  strokeDasharray: '0',  // Solid line for containment
+                },
+                markerEnd: { type: 'arrowclosed', color: '#08427b' },
+                label: 'Part of',
+                labelStyle: { 
+                  fill: '#333', 
+                  fontSize: 11, 
+                  fontWeight: 500,
+                  fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+                },
+                labelBgPadding: [8, 4],
+                labelBgBorderRadius: 4,
+                labelBgStyle: { fill: '#f9f9f9', fillOpacity: 0.8, stroke: '#e8e8e8' }
+              });
+            }
+          }
+        }
+        
+        // Combine the relationship edges with the parent-child edges
+        flowEdges = [...flowEdges, ...parentChildEdges];
+        
         setNodes(flowNodes);
         setEdges(flowEdges);
         setLoading(false);
@@ -340,6 +380,14 @@ const BlueprintVisualization: React.FC = () => {
 
   // Define the relationship legend items with C4-style line patterns
   const relationshipLegend = [
+    { 
+      type: 'part-of', 
+      color: '#08427b', 
+      label: 'Part Of', 
+      description: 'Functionality is part of a parent pillar',
+      pattern: '0',  // Solid line
+      bgColor: '#e6f7ff'
+    },
     { 
       type: 'parent-pillar', 
       color: '#08427b', 
