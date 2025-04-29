@@ -10,15 +10,15 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://YOUR_GITHUB_USERNAME.github.io',
+  url: 'https://appathanor.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/blueprint_documentation/',
+  baseUrl: '/enterprise-app-architecture-blueprint/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'YOUR_GITHUB_USERNAME', // Usually your GitHub org/user name.
-  projectName: 'blueprint_documentation', // Usually your repo name.
+  organizationName: 'AppAthanor', // Usually your GitHub org/user name.
+  projectName: 'enterprise-app-architecture-blueprint', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
