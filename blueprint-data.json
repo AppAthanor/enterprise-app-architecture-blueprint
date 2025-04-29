@@ -1,0 +1,294 @@
+{
+  "capabilities": [
+    {
+      "id": "startup-journeys",
+      "title": "Startup journeys",
+      "description": "User journeys and experiences that occur during the application startup sequence",
+      "type": "pillar",
+      "domain": "mobile-application",
+      "owner": "user-experience-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "startup-business-process",
+          "type": "related-pillar"
+        },
+        {
+          "id": "app-journeys",
+          "type": "related-pillar"
+        }
+      ],
+      "position": {
+        "x": 300,
+        "y": 100
+      }
+    },
+    {
+      "id": "startup-business-process",
+      "title": "Startup business process",
+      "description": "Business processes and workflows executed during application startup",
+      "type": "pillar",
+      "domain": "mobile-application",
+      "owner": "business-process-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "app-minimum-conditions",
+          "type": "depends-on"
+        },
+        {
+          "id": "startup-journeys",
+          "type": "related-pillar"
+        }
+      ],
+      "position": {
+        "x": 800,
+        "y": 100
+      }
+    },
+    {
+      "id": "multi-market-application-setup",
+      "title": "Multi-market application setup",
+      "description": "Capabilities for configuring and deploying applications across multiple markets and regions",
+      "type": "pillar",
+      "domain": "mobile-application",
+      "owner": "platform-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "app-integration",
+          "type": "related-pillar"
+        },
+        {
+          "id": "app-minimum-conditions",
+          "type": "related-pillar"
+        }
+      ],
+      "position": {
+        "x": 1300,
+        "y": 100
+      }
+    },
+    {
+      "id": "app-minimum-conditions",
+      "title": "App minimum conditions",
+      "description": "Core requirements and conditions that must be met for the application to function properly",
+      "type": "pillar",
+      "domain": "mobile-application",
+      "owner": "platform-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "critical",
+      "dependencies": [
+        {
+          "id": "app-integration",
+          "type": "related-pillar"
+        }
+      ],
+      "position": {
+        "x": 300,
+        "y": 450
+      }
+    },
+    {
+      "id": "app-journeys",
+      "title": "App journeys",
+      "description": "Core user journeys and experiences within the application after startup",
+      "type": "pillar",
+      "domain": "mobile-application",
+      "owner": "user-experience-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "startup-journeys",
+          "type": "related-pillar"
+        }
+      ],
+      "position": {
+        "x": 800,
+        "y": 450
+      }
+    },
+    {
+      "id": "app-integration",
+      "title": "App Integration",
+      "description": "Core capabilities for integrating the application with various systems, platforms, and services",
+      "type": "pillar",
+      "domain": "mobile-application",
+      "owner": "integration-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "multi-market-application-setup",
+          "type": "related-pillar"
+        },
+        {
+          "id": "app-minimum-conditions",
+          "type": "related-pillar"
+        }
+      ],
+      "position": {
+        "x": 1300,
+        "y": 450
+      }
+    },
+    {
+      "id": "sdks-integration-per-market",
+      "title": "SDKs integration per market",
+      "description": "Management of third-party SDK integrations with market-specific configurations",
+      "type": "functionality",
+      "domain": "mobile-application",
+      "owner": "integration-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "app-integration",
+          "type": "parent-pillar"
+        },
+        {
+          "id": "multi-market-application-setup",
+          "type": "related-pillar"
+        }
+      ],
+      "position": {
+        "x": 950,
+        "y": 650
+      }
+    },
+    {
+      "id": "remote-feature-killswitch",
+      "title": "Remote feature killswitch",
+      "description": "Capability to remotely disable specific features in case of issues",
+      "type": "functionality",
+      "domain": "mobile-application",
+      "owner": "operations-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "feature-integration",
+          "type": "related-functionality"
+        },
+        {
+          "id": "app-integration",
+          "type": "parent-pillar"
+        }
+      ],
+      "position": {
+        "x": 1650,
+        "y": 650
+      }
+    },
+    {
+      "id": "feature-integration",
+      "title": "Feature Integration",
+      "description": "Capabilities for integrating features into the application, including entry points, market configuration, and localization",
+      "type": "functionality",
+      "domain": "mobile-application",
+      "owner": "integration-team",
+      "status": "active",
+      "phase": "current",
+      "criticality": "high",
+      "dependencies": [
+        {
+          "id": "app-integration",
+          "type": "parent-pillar"
+        }
+      ],
+      "position": {
+        "x": 950,
+        "y": 800
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source": "startup-journeys",
+      "target": "startup-business-process",
+      "type": "related-pillar"
+    },
+    {
+      "source": "startup-journeys",
+      "target": "app-journeys",
+      "type": "related-pillar"
+    },
+    {
+      "source": "startup-business-process",
+      "target": "app-minimum-conditions",
+      "type": "depends-on"
+    },
+    {
+      "source": "startup-business-process",
+      "target": "startup-journeys",
+      "type": "related-pillar"
+    },
+    {
+      "source": "multi-market-application-setup",
+      "target": "app-integration",
+      "type": "related-pillar"
+    },
+    {
+      "source": "multi-market-application-setup",
+      "target": "app-minimum-conditions",
+      "type": "related-pillar"
+    },
+    {
+      "source": "app-minimum-conditions",
+      "target": "app-integration",
+      "type": "related-pillar"
+    },
+    {
+      "source": "app-journeys",
+      "target": "startup-journeys",
+      "type": "related-pillar"
+    },
+    {
+      "source": "app-integration",
+      "target": "multi-market-application-setup",
+      "type": "related-pillar"
+    },
+    {
+      "source": "app-integration",
+      "target": "app-minimum-conditions",
+      "type": "related-pillar"
+    },
+    {
+      "source": "sdks-integration-per-market",
+      "target": "app-integration",
+      "type": "parent-pillar"
+    },
+    {
+      "source": "sdks-integration-per-market",
+      "target": "multi-market-application-setup",
+      "type": "related-pillar"
+    },
+    {
+      "source": "remote-feature-killswitch",
+      "target": "feature-integration",
+      "type": "related-functionality"
+    },
+    {
+      "source": "remote-feature-killswitch",
+      "target": "app-integration",
+      "type": "parent-pillar"
+    },
+    {
+      "source": "feature-integration",
+      "target": "app-integration",
+      "type": "parent-pillar"
+    }
+  ]
+}

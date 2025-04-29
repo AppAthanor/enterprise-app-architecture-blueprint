@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblueprint_system=self.webpackChunkblueprint_system||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/enterprise-app-architecture-blueprint/blog","blogTitle":"Blog","authorsListPath":"/enterprise-app-architecture-blueprint/blog/authors"}')}}]);
