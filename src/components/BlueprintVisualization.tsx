@@ -443,7 +443,13 @@ const BlueprintVisualization: React.FC = () => {
               </div>
             </div>
           </div>
-          <div style={{ width: '100%', height: '700px', border: '1px solid #ddd', borderRadius: '8px' }}>
+          <div style={{ 
+            width: '100%', 
+            height: '600px', 
+            border: '1px solid #ddd', 
+            borderRadius: '8px',
+            marginBottom: '40px' // Add margin to separate from content below
+          }}>
             <ReactFlow
               nodes={nodes}
               edges={edges}
