@@ -354,7 +354,7 @@ const BlueprintVisualization: React.FC = () => {
 
   // Filter nodes based on selected domain
   useEffect(() => {
-    if (loading) return;
+    if (nodes.length === 0) return;
     
     const filteredNodes = nodes.filter(node => 
       selectedDomain === 'all' || node.data.domain === selectedDomain
@@ -376,7 +376,7 @@ const BlueprintVisualization: React.FC = () => {
         hidden: !visibleNodeIds.has(edge.source) || !visibleNodeIds.has(edge.target)
       }))
     );
-  }, [selectedDomain, loading]); // Remove nodes and edges from dependencies
+  }, [selectedDomain, nodes]); // Include nodes in dependencies instead of loading
 
   // Define the relationship legend items with C4-style line patterns
   const relationshipLegend = [
