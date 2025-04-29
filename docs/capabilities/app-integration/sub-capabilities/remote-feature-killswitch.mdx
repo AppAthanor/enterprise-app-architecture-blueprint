@@ -1,0 +1,33 @@
+---
+id: remote-feature-killswitch
+title: Remote feature killswitch
+description: Capability to remotely disable specific features in case of issues
+type: functionality
+domain: mobile-application
+owner: operations-team
+status: active
+phase: current
+criticality: high
+dependencies:
+  - id: feature-integration
+    type: related-functionality
+  - id: app-integration
+    type: parent-pillar
+---
+
+# Remote feature killswitch
+
+## Overview
+The Remote feature killswitch functionality provides the ability to remotely disable specific features or components of the application in response to critical issues or incidents. This allows for rapid mitigation of problems without requiring a full application update.
+
+## Current State
+Implements a robust, real-time feature control system that allows operations teams to disable problematic features remotely. Includes fine-grained control over feature availability by market, user segment, device type, and other criteria.
+
+## Technical Details
+- Real-time feature flag management
+- Server-driven configuration updates
+- Graceful feature disablement with appropriate user messaging
+- Granular control by market, user segment, and device
+- Audit logging for killswitch operations
+- Automated monitoring integration for trigger conditions
+- Fallback mechanisms for critical features

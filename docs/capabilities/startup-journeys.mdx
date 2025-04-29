@@ -1,0 +1,51 @@
+---
+id: startup-journeys
+title: Startup journeys
+description: User journeys and experiences that occur during the application startup sequence
+type: pillar
+domain: mobile-application
+owner: user-experience-team
+status: active
+phase: current
+criticality: high
+dependencies:
+  - id: startup-business-process
+    type: related-pillar
+  - id: app-journeys
+    type: related-pillar
+---
+
+import MetadataDisplay from '@site/src/components/MetadataDisplay';
+
+# Startup journeys
+
+<MetadataDisplay metadata={{
+  id: 'startup-journeys',
+  title: 'Startup journeys',
+  description: 'User journeys and experiences that occur during the application startup sequence',
+  type: 'pillar',
+  domain: 'mobile-application',
+  owner: 'user-experience-team',
+  status: 'active',
+  phase: 'current',
+  criticality: 'high',
+  dependencies: [
+    { id: 'startup-business-process', type: 'related-pillar' },
+    { id: 'app-journeys', type: 'related-pillar' }
+  ]
+}} />
+
+## Overview
+The Startup journeys pillar focuses on the user experiences and flows that occur during application startup. This includes onboarding, welcome experiences, feature introduction, and initial navigation that users encounter when launching the application, whether for the first time or in subsequent sessions.
+
+## Current State
+Provides a framework for creating and managing startup journeys, with support for different journey types based on user context (new user, returning user, lapsed user, etc.). Journeys are designed to optimize user engagement and feature discovery while minimizing friction during startup.
+
+## Technical Details
+- Context-aware journey selection
+- Progressive onboarding framework
+- Welcome experience management
+- Feature introduction and education
+- State persistence for journey continuity
+- A/B testing support for journey optimization
+- Journey analytics and performance monitoring

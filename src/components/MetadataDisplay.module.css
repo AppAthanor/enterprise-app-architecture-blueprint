@@ -1,0 +1,85 @@
+.metadataContainer {
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.metadataGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.metadataItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.metadataLabel {
+  font-size: 0.85rem;
+  color: #8c8c8c;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.metadataValue {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.relationshipsSection {
+  margin-top: 20px;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 16px;
+}
+
+.relationshipsSection h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.relationshipsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+
+.relationshipItem {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.relationshipType {
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.relationshipTarget {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

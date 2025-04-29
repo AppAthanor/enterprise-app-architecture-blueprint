@@ -1,0 +1,51 @@
+---
+id: startup-business-process
+title: Startup business process
+description: Business processes and workflows executed during application startup
+type: pillar
+domain: mobile-application
+owner: business-process-team
+status: active
+phase: current
+criticality: high
+dependencies:
+  - id: app-minimum-conditions
+    type: depends-on
+  - id: startup-journeys
+    type: related-pillar
+---
+
+import MetadataDisplay from '@site/src/components/MetadataDisplay';
+
+# Startup business process
+
+<MetadataDisplay metadata={{
+  id: 'startup-business-process',
+  title: 'Startup business process',
+  description: 'Business processes and workflows executed during application startup',
+  type: 'pillar',
+  domain: 'mobile-application',
+  owner: 'business-process-team',
+  status: 'active',
+  phase: 'current',
+  criticality: 'high',
+  dependencies: [
+    { id: 'app-minimum-conditions', type: 'depends-on' },
+    { id: 'startup-journeys', type: 'related-pillar' }
+  ]
+}} />
+
+## Overview
+The Startup business process pillar encompasses all business-related processes that occur during application startup. This includes account verification, user authentication, business rule application, feature entitlement checks, and other processes that establish the business context for the user session.
+
+## Current State
+Currently implements a modular approach to startup business processes, with configuration-driven process flows that can be customized by market and user segment. Processes are optimized for performance to minimize startup time while ensuring all necessary business rules are applied.
+
+## Technical Details
+- User authentication workflow
+- Account status verification
+- Entitlement and subscription checks
+- Business rule application framework
+- Market-specific process configuration
+- Process execution monitoring and optimization
+- Failure handling and graceful degradation

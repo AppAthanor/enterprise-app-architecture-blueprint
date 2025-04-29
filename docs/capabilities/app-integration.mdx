@@ -1,0 +1,61 @@
+---
+id: app-integration
+title: App Integration
+description: Core capabilities for integrating the application with various systems, platforms, and services
+type: pillar
+domain: mobile-application
+owner: integration-team
+status: active
+phase: current
+criticality: high
+dependencies:
+  - id: multi-market-application-setup
+    type: related-pillar
+  - id: app-minimum-conditions
+    type: related-pillar
+---
+
+import MetadataDisplay from '@site/src/components/MetadataDisplay';
+
+# App Integration
+
+<MetadataDisplay metadata={{
+  id: 'app-integration',
+  title: 'App Integration',
+  description: 'Core capabilities for integrating the application with various systems, platforms, and services',
+  type: 'pillar',
+  domain: 'mobile-application',
+  owner: 'integration-team',
+  status: 'active',
+  phase: 'current',
+  criticality: 'high',
+  dependencies: [
+    { id: 'multi-market-application-setup', type: 'related-pillar' },
+    { id: 'app-minimum-conditions', type: 'related-pillar' }
+  ]
+}} />
+
+## Overview
+The App Integration pillar encompasses all capabilities related to the integration of the mobile application with external systems, platforms, and services. This includes integration with backend services, third-party SDKs, authentication systems, and other components necessary for the application to function properly.
+
+## Current State
+Currently provides a robust framework for integrating with a wide range of services and platforms, with standardized interfaces and protocols. Integration patterns are well-established and documented, with reusable components for common integration scenarios.
+
+## Technical Details
+- API integration framework
+- SDK management system
+- Authentication and authorization integration
+- Event-based integration architecture
+- Integration monitoring and health checks
+- Fallback mechanisms for integration failures
+
+## Sub-Capabilities
+
+### [Feature Integration](./app-integration/sub-capabilities/feature-integration.mdx)
+Capabilities for integrating features into the application, including entry points, market configuration, and localization.
+
+### [Remote Feature Killswitch](./app-integration/sub-capabilities/remote-feature-killswitch.mdx)
+Capability to remotely disable specific features in case of issues.
+
+### [SDKs Integration Per Market](./app-integration/sub-capabilities/sdks-integration-per-market.mdx)
+Management of third-party SDK integrations with market-specific configurations.

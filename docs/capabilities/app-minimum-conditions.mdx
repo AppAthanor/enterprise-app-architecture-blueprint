@@ -1,0 +1,48 @@
+---
+id: app-minimum-conditions
+title: App minimum conditions
+description: Core requirements and conditions that must be met for the application to function properly
+type: pillar
+domain: mobile-application
+owner: platform-team
+status: active
+phase: current
+criticality: critical
+dependencies:
+  - id: app-integration
+    type: related-pillar
+---
+
+import MetadataDisplay from '@site/src/components/MetadataDisplay';
+
+# App minimum conditions
+
+<MetadataDisplay metadata={{
+  id: 'app-minimum-conditions',
+  title: 'App minimum conditions',
+  description: 'Core requirements and conditions that must be met for the application to function properly',
+  type: 'pillar',
+  domain: 'mobile-application',
+  owner: 'platform-team',
+  status: 'active',
+  phase: 'current',
+  criticality: 'critical',
+  dependencies: [
+    { id: 'app-integration', type: 'related-pillar' }
+  ]
+}} />
+
+## Overview
+The App minimum conditions pillar defines the essential requirements and conditions that must be satisfied for the application to operate correctly. This includes device compatibility, OS version requirements, necessary permissions, security checks, and other critical conditions without which the application cannot function as intended.
+
+## Current State
+Implements a comprehensive framework for checking and enforcing minimum conditions, with appropriate user messaging and fallback options when conditions are not met. Conditions are regularly reviewed and updated to align with platform changes and security requirements.
+
+## Technical Details
+- Device compatibility validation
+- OS version requirements enforcement
+- Runtime permission management
+- Security integrity checks
+- Network connectivity requirements
+- Storage requirements validation
+- Critical dependency verification

@@ -1,0 +1,49 @@
+---
+id: multi-market-application-setup
+title: Multi-market application setup
+description: Capabilities for configuring and deploying applications across multiple markets and regions
+type: pillar
+domain: mobile-application
+owner: platform-team
+status: active
+phase: current
+criticality: high
+dependencies:
+  - id: app-integration
+    type: related-pillar
+  - id: app-minimum-conditions
+    type: related-pillar
+---
+
+import MetadataDisplay from '@site/src/components/MetadataDisplay';
+
+# Multi-market application setup
+
+<MetadataDisplay metadata={{
+  id: 'multi-market-application-setup',
+  title: 'Multi-market application setup',
+  description: 'Capabilities for configuring and deploying applications across multiple markets and regions',
+  type: 'pillar',
+  domain: 'mobile-application',
+  owner: 'platform-team',
+  status: 'active',
+  phase: 'current',
+  criticality: 'high',
+  dependencies: [
+    { id: 'app-integration', type: 'related-pillar' },
+    { id: 'app-minimum-conditions', type: 'related-pillar' }
+  ]
+}} />
+
+## Overview
+The Multi-market application setup capability provides the foundation for deploying and configuring mobile applications across different geographical markets and regions. It ensures that applications can be easily adapted to meet local requirements, regulations, and user expectations while maintaining a consistent core experience.
+
+## Current State
+This pillar supports the deployment of applications across multiple markets with market-specific configurations, including localization, feature availability, and compliance requirements. It leverages a centralized configuration system that allows for market-specific overrides of global settings.
+
+## Technical Details
+- Configuration-driven market setup process
+- Market-specific resource management
+- Deployment automation for multi-market releases
+- Global vs. local feature flagging system
+- Market compliance validation framework

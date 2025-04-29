@@ -1,0 +1,47 @@
+---
+id: feature-integration
+title: Feature Integration
+description: Capabilities for integrating features into the application, including entry points, market configuration, and localization
+type: functionality
+domain: mobile-application
+owner: integration-team
+status: active
+phase: current
+criticality: high
+dependencies:
+  - id: app-integration
+    type: parent-pillar
+---
+
+import MetadataDisplay from '@site/src/components/MetadataDisplay';
+
+# Feature Integration
+
+<MetadataDisplay metadata={{
+  id: 'feature-integration',
+  title: 'Feature Integration',
+  description: 'Capabilities for integrating features into the application, including entry points, market configuration, and localization',
+  type: 'functionality',
+  domain: 'mobile-application',
+  owner: 'integration-team',
+  status: 'active',
+  phase: 'current',
+  criticality: 'high',
+  dependencies: [
+    { id: 'app-integration', type: 'parent-pillar' }
+  ]
+}} />
+
+## Overview
+The Feature Integration functionality provides capabilities for integrating features into the application in a consistent and maintainable way. This includes defining entry points to journeys, configuring features by market, and managing language and copy for features.
+
+## Current State
+Currently implements a modular approach to feature integration, with standardized patterns for entry points, configuration, and localization. Features can be easily integrated into the application with appropriate market-specific configurations and localizations.
+
+## Technical Details
+- Entry point management for journeys
+- Market-specific feature configuration framework
+- Localization and copy management system
+- Feature dependency management
+- Integration testing automation
+- Feature flagging and gradual rollout support

@@ -1,0 +1,48 @@
+---
+id: app-journeys
+title: App journeys
+description: Core user journeys and experiences within the application after startup
+type: pillar
+domain: mobile-application
+owner: user-experience-team
+status: active
+phase: current
+criticality: high
+dependencies:
+  - id: startup-journeys
+    type: related-pillar
+---
+
+import MetadataDisplay from '@site/src/components/MetadataDisplay';
+
+# App journeys
+
+<MetadataDisplay metadata={{
+  id: 'app-journeys',
+  title: 'App journeys',
+  description: 'Core user journeys and experiences within the application after startup',
+  type: 'pillar',
+  domain: 'mobile-application',
+  owner: 'user-experience-team',
+  status: 'active',
+  phase: 'current',
+  criticality: 'high',
+  dependencies: [
+    { id: 'startup-journeys', type: 'related-pillar' }
+  ]
+}} />
+
+## Overview
+The App journeys pillar encompasses all primary user journeys and experiences within the application post-startup. This includes the main functional flows, task completion paths, and user interactions that constitute the core value proposition of the application.
+
+## Current State
+Implements a comprehensive journey framework that supports the creation, management, and optimization of user journeys throughout the application. Journeys are modular and composable, allowing for reuse of common patterns and consistent experiences across the application.
+
+## Technical Details
+- Journey definition and composition framework
+- State management for complex journeys
+- Cross-journey navigation and deep linking
+- Journey personalization
+- Performance monitoring and optimization
+- A/B testing framework for journey variants
+- Accessibility compliance for all journeys

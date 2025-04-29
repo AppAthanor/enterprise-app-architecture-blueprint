@@ -1,0 +1,33 @@
+---
+slug: /
+id: homepage
+title: Enterprise Architecture Blueprint
+description: Interactive visualization of enterprise capabilities
+---
+
+import BlueprintVisualization from '@site/src/components/BlueprintVisualization';
+
+# Enterprise Architecture Blueprint
+
+## Overview
+This interactive blueprint provides a visualization of all enterprise capabilities, their relationships, and metadata. Use the controls below to explore different domains, capability types, and relationships.
+
+## Visualization
+
+<BlueprintVisualization />
+
+## How to Use the Blueprint
+
+### Filtering
+- **Domain Filter**: Select specific domains to focus the visualization
+- **Status Filter**: View capabilities by their current status (active, planned, deprecated)
+- **Type Filter**: Filter by capability type (microservice, database, UI, etc.)
+
+### Relationship Types
+- **Consumes API**: Service-to-service API dependencies
+- **Produces Events**: Event publishing relationships
+- **Data Store**: Database and storage dependencies
+- **UI Flow**: User interface navigation flows
+
+### Navigation
+Click on any node to view detailed information about the capability. Use the zoom and pan controls to navigate the visualization.
